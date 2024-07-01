@@ -1,0 +1,43 @@
+A játék lényege, hogy egy labirintus szerű börtönben vagy ahonnan ki kell jutnod, közben tárgyakat szedsz fel amik segítenek e cél elérésében.
+
+Térkép:
+A 'O' mutatja jelenleg hol vagy.
+Az 'X' mutatja a kiutat.
+Az 'a' az árusokat.
+A 't' a tárgyakat jelöli, amik lehetnek segítők, pl:élet és sebzést növelsé, vagy épp ellenkezőleg, hátrányos helyzetbe hozhatnak, legyengíthetnek, szóval kétszer is gondold meg mit veszel fel.
+A 'p' a pénzeszsákokat jelöli, zsákonként 100¢ (kredit) jár.
+Az 'E' jelöli az ellenséges lényeket, személyeket, akikkel utad során találkozni fogsz. Első ránézésre mindneki ugyanolyannak tűnik, szóval mielött harcolsz, nézz körbe, hátha kilehet őket kerülni.
+A 'Z' a zárt ajtókat jelöli amikhez találhatsz kulcsokat. Minden ajtót csak egyféle kulccsal tudsz kinyitni.
+A 'k' a kulcsokat jelöli, amikhez a gondnok írt emlékeztetőt, hogy hova is jó. Szegény mindig elhagyja a kulcsait valahol.
+
+Moddolás:
+A map.leiras tartalmazza a pályát. az első sorban megkell adni mennyi oszlop és sor van.
+A pálya alatt meg kell adni hogy az X-be belépve melyik pályára irányítson át minket. Ha nem vezet sehova, ez a vége, a 'Vege' kulcsszónak kell szerepelnie. Utána szerepelnie kell a következő sorrendben a fájloknak: tárgyak fájl, ellenségek fájl, árusok fájl, kulcsok fájl és ajtók fájl.
+Amelyiket nem szeretnénk most felhasználni, annak helyére a 'nincs' kulcsszónak kell lennie.
+A falat a # jelöli.(Kis és nagybetűk számítanak)
+
+Minden fájl első sora azt irja le, hány tétel szerepel benne.
+Tárgyak és Ellenségek
+-Tételek száma
+-A neve az adott tárgynak vagy ellenségnek
+-Sebzés, védelem, hanynadik sor, hanyadik oszlop
+
+Árusok
+-Tételek száma
+-haynadik sor, hanyadik oszlop, áruinak száma, ha nincs akkor 0
+ez alatt
+-Áru neve
+-Áru:Sebzés, védelem, ára, darabszám. ha kulcs az áru akkor a db az -1.
+(Felsorolni ugyan ebben a formátumban annyi árut amennyit megadtunk. max 9)
+
+Kulcsok és Ajtók
+-Tételek száma
+-A kulcshoz tartozó üzenet
+-hanynadik sor, hanyadik oszlop, id
+Ha a kulcsot meg kell venni, akkor a sor,oszlop az -1 -1.
+Azok a kulcsok és ajtók tartoznak össze amelyeknek egyezik az id-jük.
+
+
+
+
+
